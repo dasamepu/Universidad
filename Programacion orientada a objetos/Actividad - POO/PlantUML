@@ -1,0 +1,81 @@
+//empresa
+//area
+//vendedor
+//sede
+//asesor
+//holding
+//pais
+//captacion
+
+@startuml
+class Empresa{
+- String id;
+- String nombre_empresa;
+- String fecha_entrada_holding;
+- Integer facturacion_anual;
+- Integer numero_vendedores;
+
++ setSede();
++ getSede();
+}
+
+class Holding{
+- String id;
+- String nombre_holding;
+}
+
+class Vendedor{
+- String id;
+- String nombre;
+- String direccion;
+- Integer numero_trabajos;
+
++ setCantidadDeTrabajos();
++ getCantidadDeTrabajos();
+}
+
+class Captacion{
+- String id;
+- String fecha_captación;
+}
+
+class Sede{
+- String id;
+- String ciudad_localiza;
+}
+
+class Asesor{
+- String id;
+- String fecha_inicio;
+- String nombre;
+- String direccion;
+- String titulacion;
+}
+
+class Area{
+- String id;
+- String nombre;
+- String descripción;
+}
+
+class Pais{
+- String id;
+- String nombre;
+- String capital;
+- Integer num_habitantes;
+- Integer pib;
+}
+
+Holding “1” o-- “1..*” Empresa : posee
+Vendedor “1” - “1..*” Vendedor : capta
+Vendedor “1” -> “1..*” Captacion : hace
+Holding “1” --> “1..*” Area : actua
+Vendedor “*” --> “1” Empresa : trabaja
+Asesor “1..*” --> “1..*” Empresa : asesora
+Asesor “1..*” --> “1” Holding : trabaja
+Asesor “1..*”  --> “1..*” Area : cubre
+Empresa “1..*” --> “1..*” Pais : tiene actividades
+Empresa “1..*” --> “1..*” Area : cubre
+Empresa “1” --> “1” Sede : tiene
+Pais “1” --> “1..*” Sede : hay
+@enduml

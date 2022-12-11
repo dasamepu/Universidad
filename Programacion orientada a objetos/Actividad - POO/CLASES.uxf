@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>45</x>
+      <y>486</y>
+      <w>189</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Holding
+--
+- String id;
+- String nombre_holding;
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>531</x>
+      <y>207</y>
+      <w>189</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>Base_de_datos
+--
+- String id;
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>531</x>
+      <y>279</y>
+      <w>189</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>Asesor
+--
+- String id;
+- String fecha_inicio;
+- String nombre;
+- String direccion;
+- String titulacion;
+- Boolean da_soporte;
+- Boolean cubre_areas;
+- Boolean asesora_empresas;
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>495</x>
+      <y>99</y>
+      <w>225</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>Area
+--
+- String id;
+- String nombre;
+- String descripción;
+- Boolean ser_cubierta_por_asesor;
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>45</x>
+      <y>315</y>
+      <w>270</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>Vendedor_a_cargo
+--
+- String id;
+- String nombre;
+- String direccion;
+- Integer numero_trabajos;
+- Boolean capta_trabajadores;
+- Boolean tiene_a_su_cargo_trabajadores;
+--
++ setCantidadDeTrabajos();
++ getCantidadDeTrabajos();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>531</x>
+      <y>486</y>
+      <w>189</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Vendedor_captado
+--
+- String fecha_captación;
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>45</x>
+      <y>99</y>
+      <w>387</w>
+      <h>207</h>
+    </coordinates>
+    <panel_attributes>Empresa
+--
+- String id;
+- String nombre_empresa;
+- String fecha_entrada_holding;
+- Integer facturacion_anual;
+- Integer numero_vendedores;
+- Boolean cubre_areas_del_mercado;
+- Boolean desarrollando_actividades_en_un_pais;
+- Boolean tiene_sede;
+- Boolean tiene_sede_donde_no_desarrolla_actividades;
+- Boolean tiene_asesores;
+--
++ setSede();
++ getSede();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>324</x>
+      <y>441</y>
+      <w>189</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>Pais
+--
+- String id;
+- String nombre;
+- String capital;
+- Integer num_habitantes;
+- Integer pib;
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>324</x>
+      <y>342</y>
+      <w>189</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Sede
+--
+- String id;
+- String ciudad_localiza;
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

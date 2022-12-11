@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>324</x>
+      <y>78</y>
+      <w>126</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>Holding
+--
+- String id;
+- String nombre_holding;
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>588</x>
+      <y>342</y>
+      <w>156</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>Area
+--
+- String id;
+- String nombre;
+- String descripción;
+- Boolean ser_cubierta_por_asesor;
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>282</x>
+      <y>486</y>
+      <w>126</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>Pais
+--
+- String id;
+- String nombre;
+- String capital;
+- Integer num_habitantes;
+- Integer pib;
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>12</x>
+      <y>342</y>
+      <w>180</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>Vendedor_a_cargo
+--
+- String id;
+- String nombre;
+- String direccion;
+- Integer numero_trabajos;
+- Boolean capta_trabajadores;
+- Boolean tiene_a_su_cargo_trabajadores;
+--
++ setCantidadDeTrabajos();
++ getCantidadDeTrabajos();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>618</x>
+      <y>180</y>
+      <w>126</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>Asesor
+--
+- String id;
+- String fecha_inicio;
+- String nombre;
+- String direccion;
+- String titulacion;
+- Boolean da_soporte;
+- Boolean cubre_areas;
+- Boolean asesora_empresas;
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>582</x>
+      <y>516</y>
+      <w>126</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>Sede
+--
+- String id;
+- String ciudad_localiza;
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>474</x>
+      <y>228</y>
+      <w>126</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Base_de_datos
+--
+- String id;
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>216</y>
+      <w>258</w>
+      <h>138</h>
+    </coordinates>
+    <panel_attributes>Empresa
+--
+- String id;
+- String nombre_empresa;
+- String fecha_entrada_holding;
+- Integer facturacion_anual;
+- Integer numero_vendedores;
+- Boolean cubre_areas_del_mercado;
+- Boolean desarrollando_actividades_en_un_pais;
+- Boolean tiene_sede;
+- Boolean tiene_sede_donde_no_desarrolla_actividades;
+- Boolean tiene_asesores;
+--
++ setSede();
++ getSede();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>378</x>
+      <y>120</y>
+      <w>48</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=*
+posee v</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>444</x>
+      <y>96</y>
+      <w>90</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=1
+tiene &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;20.0;130.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>84</x>
+      <y>306</y>
+      <w>138</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=*
+trabaja &gt;</panel_attributes>
+    <additional_attributes>210.0;20.0;10.0;20.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>444</x>
+      <y>78</y>
+      <w>186</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=* 
+trabaja ^</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0;230.0;90.0;230.0;220.0;290.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>78</x>
+      <y>444</y>
+      <w>30</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+m1=1
+m2=1..*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>348</y>
+      <w>180</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..*
+m2=1..*
+cubre &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;270.0;40.0;280.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>348</y>
+      <w>96</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..*
+m2=1..*
+tiene actividades v</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>384</x>
+      <y>348</y>
+      <w>252</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1
+tiene &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0;400.0;150.0;400.0;280.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>666</x>
+      <y>282</y>
+      <w>48</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..*
+m2=1..*
+cubre v</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>234</x>
+      <y>144</y>
+      <w>474</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..*
+m2=1..*
+asesorar v</panel_attributes>
+    <additional_attributes>180.0;120.0;180.0;100.0;10.0;100.0;10.0;10.0;750.0;10.0;750.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>402</x>
+      <y>522</y>
+      <w>192</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..*
+hay &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;300.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>438</x>
+      <y>120</y>
+      <w>186</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..*
+actua &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;210.0;90.0;330.0;210.0;350.0;270.0;350.0;270.0;370.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>24</x>
+      <y>528</y>
+      <w>126</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>Vendedor_captado
+--
+-String fecha_captación;
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
